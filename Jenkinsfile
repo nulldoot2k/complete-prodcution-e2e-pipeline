@@ -12,9 +12,7 @@ pipeline{
         cleanWs()
       }
     }
-  }
 
-  stages {
     stage("Checkout from SCM") {
       steps{
         git branch: 'main', credentialsID: 'github', url: 'https://github.com/nulldoot2k/complete-prodcution-e2e-pipeline'
